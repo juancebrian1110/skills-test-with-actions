@@ -23,7 +23,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Run markdown lint
-        run: |
-          npm install remark-cli remark-preset-lint-consistent
-        run: |
-          npm remark . --use remark-preset-lint-consistent --frail
+        run: npm install remark-cli remark-preset-lint-consistent
+      - name: remark
+        run: npm remark . --use remark-preset-lint-consistent --frail
